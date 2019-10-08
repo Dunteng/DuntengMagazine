@@ -1,0 +1,2 @@
+<!--pages/type/type.wxml-->
+<text bind:tap="onTap">pages/type/type.wxml</text>

@@ -1,0 +1,22 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+
+<!-- <d-search value="{{searchWord}}"/> -->
+
+<view class="container">
+    <d-search value="{{searchWord}}"/>
+
+    <view class="loader-container" wx:if="{{searching}}">
+        <d-loading class="loader"/>
+    </view>
+
+    <view class="recommend-container">
+        <view class="text">#{{tag}}></view>
+        <view class="recommend-list">
+            <view class="recommend" wx:for="{{recommend}}" wx:key="*this">{{item}}</view>
+        </view>
+    </view>
+
+    <d-articleList article-list="{{articleList}}"  more="{{more}}" word="{{searchWord}}"/>
+
+</view>

@@ -1,0 +1,50 @@
+<!--pages/mark/mark.wxml-->
+<!-- <text>pages/mark/mark.wxml</text> -->
+
+<view class="container">
+
+    <view class="user-container">
+        <view class="user-info">
+
+
+            <view class="user-name">{{userInfo.nickName}}</view>
+            <view class="user-avatar">
+                <!-- <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2758807304,2560528048&fm=27&gp=0.jpg" /> -->
+                <image wx:if="{{authorized}}" src="{{userInfo.avatarUrl}}" />
+
+                
+
+                <d-imgBtn open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
+                    <image src="/images/mark/login.png" slot="img"/>
+                </d-imgBtn>
+
+            </view>
+
+            <!-- <open-data type="userAvatarUrl" /> -->
+            <!-- <open-data type="userNickName" class="user-name"/>
+            <open-data type="userAvatarUrl" class="user-avatar"/> -->
+
+
+            
+
+        </view>
+
+        <view class="share">
+            <!-- <image src="/images/mark/relay.png" /> -->
+            <!-- <d-imgBtn open-type="getUserInfo" /> -->
+            <d-imgBtn open-type="share">
+                <image src="/images/mark/relay.png" slot="img"/>
+            </d-imgBtn>
+        </view>
+
+        <!-- <button class="share">
+            <image src="/images/mark/relay.png" />
+        </button> -->
+
+    </view>
+
+    <d-articleList article-list="{{likeList}}" />
+
+    <d-imgBtn />
+
+</view>

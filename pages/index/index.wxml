@@ -1,0 +1,25 @@
+<d-nav class="nav" catch:nav="onNav"/>
+
+<d-recommend recommend="{{recommend}}" magazine-id="{{magazineId}}" class="recommend"/>
+
+
+<d-tagList mark-list="{{markList}}">
+    <!-- <view slot="before">+</view> -->
+    <d-add slot="before" class="add" wx:if="{{magazineId == 0}}"/>
+    <view slot="after" class="to-catalog" catch:tap="onCatalog" wx:if="{{magazineId === 0}}">•••</view>
+</d-tagList>
+
+
+<d-articleList  id="test"
+                article-list="{{articleList}}"
+                more="{{getMore}}"
+                magazineId="{{magazineId}}"/>
+
+<view class="loading-container" wx:if="{{loading}}">
+	<d-loading class="loading"/>
+</view>
+
+
+
+
+
