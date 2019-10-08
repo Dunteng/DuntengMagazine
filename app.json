@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/mark/mark",
     "pages/index/index",
+    "pages/mark/mark",
     "pages/type/type",
     "pages/catalog/catalog"
   ],
